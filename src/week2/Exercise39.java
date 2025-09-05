@@ -4,14 +4,14 @@ public class Exercise39 {
 
     private  static void printStars(int amount){
         int i = 0;
-        while (amount  >= i){
+        while (amount  > i){
             System.out.print("*");
             i++;
         }
         System.out.print("\n");
     }
     public static void main(String[] args) {
-        printSquare(3);
+            printRectangle(5, 3);
     }
 
     public static void printSquare(int sideSize){
@@ -21,5 +21,10 @@ public class Exercise39 {
             i++;
         }
     }
-}
 
+    public static void printRectangle(int width, int height){
+        for (int j = 0; j < height ; j++){
+                printStars(width);
+            }
+        }
+    }
