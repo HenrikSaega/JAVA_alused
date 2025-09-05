@@ -11,7 +11,7 @@ public class Exercise39 {
         System.out.print("\n");
     }
     public static void main(String[] args) {
-            printRectangle(5, 3);
+            printTriangle(5);
     }
 
     public static void printSquare(int sideSize){
@@ -26,5 +26,11 @@ public class Exercise39 {
         for (int j = 0; j < height ; j++){
                 printStars(width);
             }
+    }
+
+    public static void printTriangle(int size){
+        for(int j = 1; j <= size ; j++){
+            printStars(j);
         }
     }
+}
