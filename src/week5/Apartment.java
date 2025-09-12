@@ -17,4 +17,11 @@ public class Apartment {
         }
         return false;
     }
+
+    public int priceDifference(Apartment otherApartment){
+        if((this.squareMeters * this.pricePerSquareMeter)  >= (otherApartment.squareMeters * otherApartment.pricePerSquareMeter)){
+            return (this.squareMeters * this.pricePerSquareMeter) - (otherApartment.squareMeters * otherApartment.pricePerSquareMeter);
+        }
+        return ((otherApartment.squareMeters * otherApartment.pricePerSquareMeter) - (this.squareMeters * this.pricePerSquareMeter));
+    }
 }

@@ -8,5 +8,8 @@ public class Exercise87 {
 
         System.out.println( studioManhattan.larger(twoRoomsBrooklyn) );
         System.out.println( fourAndKitchenBronx.larger(twoRoomsBrooklyn) );
+
+        System.out.println( studioManhattan.priceDifference(twoRoomsBrooklyn) );        // 71600
+        System.out.println( fourAndKitchenBronx.priceDifference(twoRoomsBrooklyn) );    // 35400
     }
 }
