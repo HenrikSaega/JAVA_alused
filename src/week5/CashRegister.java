@@ -27,6 +27,23 @@ public class CashRegister {
         }
         return cashGiven;
     }
+    public boolean payEconomical(LyyraCard  card){
+        if(card.balance() >= 2.50){
+            this.economicalSold += 1;
+            card.loadMoney(2.50);
+            return true;
+        }
+        return false;
+    }
+    public boolean payGourmet(LyyraCard  card){
+        if(card.balance() >= 4.0){
+            this.gourmetSold += 1;
+            card.pay(4.0);
+            return true;
+        }
+        return false;
+    }
+
     public String toString(){
         return "Money in register "+cashInRegister+" economial lunches sold: "+economicalSold+" gourmet lunches sold: "+gourmetSold;
     }
