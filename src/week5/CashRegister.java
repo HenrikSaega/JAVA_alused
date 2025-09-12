@@ -44,6 +44,11 @@ public class CashRegister {
         return false;
     }
 
+    public  void loadMoneyToCard(LyyraCard card, double addMoney){
+        this.cashInRegister += addMoney;
+        card.loadMoney(addMoney);
+    }
+
     public String toString(){
         return "Money in register "+cashInRegister+" economial lunches sold: "+economicalSold+" gourmet lunches sold: "+gourmetSold;
     }
