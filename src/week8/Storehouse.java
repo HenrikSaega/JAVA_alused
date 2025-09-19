@@ -25,4 +25,14 @@ public class Storehouse {
         }
         return -99;
     }
+    public int stock(String product){
+    return stock.getOrDefault(product, 0);
+    }
+    public boolean take(String product){
+        if(storehouse.containsKey(product)){
+            stock.remove(product);
+            return true;
+        }
+        return false;
+    }
 }
