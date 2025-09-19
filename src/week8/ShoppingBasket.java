@@ -1,5 +1,6 @@
 package week8;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,5 +23,11 @@ public class ShoppingBasket {
             total += p.price();
         }
         return total;
+    }
+
+    public  void print() {
+        for(Purchase purchase : ShoppingBasket.values()){
+            System.out.println(purchase.toString());
+        }
     }
 }
