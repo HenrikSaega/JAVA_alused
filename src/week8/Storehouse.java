@@ -30,8 +30,9 @@ public class Storehouse {
     return stock.getOrDefault(product, 0);
     }
     public boolean take(String product){
-        if(storehouse.containsKey(product)){
-            stock.remove(product);
+        int currentStock = stock.getOrDefault(product, 0); //Muudetud Shop.java failiga
+        if(currentStock > 0) {
+            stock.put(product, currentStock - 1);
             return true;
         }
         return false;
