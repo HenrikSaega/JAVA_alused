@@ -30,6 +30,19 @@ public class Suitcase {
         return temp;
     }
 
+    public Thing heaviestThing(){
+        if(things.size() == 0){
+            return null;
+        }
+        Thing heaviest = things.get(0);
+        for(Thing thing : things){
+            if(thing.getWeight() > heaviest.getWeight()){
+                heaviest = thing;
+            }
+        }
+        return heaviest;
+    }
+
     @Override
     public String toString() {
         if(this.things.size() == 0){
