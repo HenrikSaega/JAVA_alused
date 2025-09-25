@@ -22,6 +22,13 @@ public class Suitcase {
         }
         return total;
     }
+    public ArrayList<Thing> printThings() {
+        ArrayList<Thing> temp = new ArrayList<>();
+        for (Thing thing : things) {
+            System.out.println(thing);
+        }
+        return temp;
+    }
 
     @Override
     public String toString() {
