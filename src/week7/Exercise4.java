@@ -1,23 +1,24 @@
 package week7;
 
 public class Exercise4 {
-    public static void main(String[] args) {
-        Thing book = new Thing("Happiness in Three Steps", 2);
-        Thing mobile = new Thing("Nokia 3210", 1);
-        Thing brick = new Thing("Brick", 4);
-
-        Suitcase tomsCase = new Suitcase(10);
-        tomsCase.addThing(book);
-        tomsCase.addThing(mobile);
-
-        Suitcase georgesCase = new Suitcase(10);
-        georgesCase.addThing(brick);
-
+    public static void main(String[] Container) {
         Container container = new Container(1000);
-        container.addSuitcase(tomsCase);
-        container.addSuitcase(georgesCase);
+        addSuitcasesFullOfBricks(container);
+    }
 
-        System.out.println("There are the following things in the container suitcases:");
-        container.printThings();
+    public static void addSuitcasesFullOfBricks(Container container) {
+        int weight = 1;
+
+        while(container.totalWeight() < 1000){
+            Thing brick = new Thing("Brick", weight);
+            Suitcase suitcase = new Suitcase(1000);
+            suitcase.addThing(brick);
+            if (container.totalWeight() + suitcase.totalWeight() > 1000) {
+                break;
+            }
+            container.addSuitcase(suitcase);
+            System.out.println(container);
+            weight++;
+        }
     }
 }
