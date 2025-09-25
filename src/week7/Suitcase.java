@@ -42,6 +42,9 @@ public class Suitcase {
         }
         return heaviest;
     }
+    public ArrayList<Thing> getThings() {
+        return this.things;
+    }
 
     @Override
     public String toString() {
