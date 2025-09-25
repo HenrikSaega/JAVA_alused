@@ -25,6 +25,12 @@ public class Suitcase {
 
     @Override
     public String toString() {
-        return this.things.size() + " things ( " + this.totalWeight() + " kg)";
+        if(this.things.size() == 0){
+            return "Empty " + "(0 kg)";
+        } else if(this.things.size() == 1){
+            return this.things.size() + " thing ( " + this.totalWeight() + " kg)";
+        } else {
+            return this.things.size() + " things ( " + this.totalWeight() + " kg)";
+        }
     }
 }
