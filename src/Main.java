@@ -3,6 +3,5 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Henrik Saega");
-        System.out.println("(And all the people of the world)");
     }
 }
