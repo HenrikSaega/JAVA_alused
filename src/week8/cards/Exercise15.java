@@ -1,5 +1,4 @@
 package week8.cards;
-//
 public class Exercise15 {
     public static void main(String[] args) {
         Card first = new Card(1, Card.DIAMONDS);
